@@ -9,7 +9,7 @@
     - name: Creating AWS instance using Ansible
       amazon.aws.ec2:
         aws_access_key: "XXXXXXXXXXXXXXXX"
-        aws_secret_key: "oZZ+H8sSNdqfscbF5hwgW8PYIRwtWlLrndzIyXj+"
+        aws_secret_key: "XXXXXXXXXXXXXXXXXXXXX"
         key_name: "myawskey"
         instance_type: t2.micro
         image: ami-052efd3df9dad4825
