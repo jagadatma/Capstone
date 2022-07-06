@@ -1,0 +1,21 @@
+#####################################################################
+### This is installation playbook of EC2 instance
+# provisioning using ansible
+######################################################################
+- name: EC2 Instance Creation
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Creating AWS instance using Ansible
+      amazon.aws.ec2:
+        aws_access_key: "XXXXXXXXXXXXXXXX"
+        aws_secret_key: "oZZ+H8sSNdqfscbF5hwgW8PYIRwtWlLrndzIyXj+"
+        key_name: "myawskey"
+        instance_type: t2.micro
+        image: ami-052efd3df9dad4825
+        region: us-east-1
+        group_id: sg-056ab22cd518101ff
+        wait: yes
+        count: 2
+        vpc_subnet_id: subnet-0a5f9a5e3e531c442
+        assign_public_ip: yes
