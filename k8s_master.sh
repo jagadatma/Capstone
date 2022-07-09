@@ -40,7 +40,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 ## below installs weave networking driver 
 
-sudo kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')" 
+kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')" 
 
 # Validate: 
 # kubectl get nodes
